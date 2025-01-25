@@ -1,49 +1,70 @@
-# Quantitative Research Project: Algorithmic Trading Strategy
+# Quantitative Cryptocurrency Trading Strategy
 
-# Overview
-This project presents an advanced algorithmic trading strategy designed for the cryptocurrency market. Using machine learning models and quantitative analysis, the strategy aims to outperform benchmarks like Bitcoin (BTC) in terms of returns and risk-adjusted performance.
+This repository contains a Python implementation of a quantitative trading strategy focused on cryptocurrency markets. The strategy uses historical price and volume data to generate signals, manage portfolio weights, and evaluate performance.
 
-# Key Features
-* Sophisticated Models: Implemented models like Long Short-Term Memory (LSTM), Gradient Support Vector Machines (SVM), and Random Forest for predictive analytics.
-* Strategy Optimization: Incorporated Bayesian optimization to fine-tune hyperparameters.
-* Comprehensive Evaluation: Evaluated strategy performance with metrics like Sharpe Ratio, Maximum Drawdown, and Hit Rate.
-* Rolling Correlations: Examined correlations between the strategy and Bitcoin for dynamic risk assessment.
-* Monthly Return Analysis: Detailed insights into the monthly performance, highlighting win rates and volatility.
+## Features
 
-# Performance Highlights
-## Strategy Metrics
-* Gross Sharpe Ratio: 1.93
-* Net Sharpe Ratio: 1.69
-* Maximum Drawdown: -29.11%
-* Days Invested: 99.14%
-* Hit Rate: 48.00%
+- **Data Fetching**: Utilizes Binance API for historical cryptocurrency data
+- **Signal Generation**: Computes volume-adjusted momentum signals
+- **Risk Management**: Implements stop-loss and dynamic portfolio weighting
+- **Backtesting Engine**: Includes transaction costs and return analysis
+- **Visualization Tools**: Comprehensive performance and metrics plotting
+- **Performance Analytics**: Calculates Sharpe ratios, drawdowns, and statistics
 
-## Cumulative Returns
-* Gross Return: 1137.37%
-* Net Return: 769.64%
-* BTC Return: 326.02%
+## Supported Cryptocurrencies
 
-## Monthly Return Insights
-* Average Monthly Return: 13.35%
-* Monthly Std Dev: 39.08%
-* Best Month: 182.56%
-* Win Rate: 58.33%
+- BTC/USDT
+- ETH/USDT
+- BNB/USDT
+- SOL/USDT
+- ADA/USDT
 
-# Methodology
-* Data Preprocessing: Cleaned and prepared market data for analysis.
-* Feature Engineering: Extracted meaningful features to improve model predictions.
-* Model Training: Deployed ML models to predict future returns based on historical patterns.
-* Portfolio Optimization: Allocated weights dynamically based on expected returns and risks.
-* Backtesting: Simulated strategy performance using historical data.
-* Performance Analysis: Assessed performance using industry-standard metrics and visualizations.
+## Prerequisites
 
-# Technologies Used
-* Languages: Python
-* Libraries: NumPy, pandas, scikit-learn, TensorFlow, matplotlib
-* Tools: Jupyter Notebook, Bayesian Optimization, Rolling Correlation Analysis
+- Python 3.8+
+- Required libraries:
+  ```
+  pandas
+  numpy
+  matplotlib
+  seaborn
+  binance
+  ```
 
-# Visualizations
-* Rolling Correlation with BTC: Shows dynamic correlations over time.
-* Cumulative Return Comparison: Demonstrates strategy outperformance relative to BTC.
-* Monthly Return Analysis: Highlights volatility and consistency.
+## Installation
 
+```bash
+pip install pandas numpy matplotlib seaborn binance
+```
+
+## Setup
+
+1. Clone the repository
+2. Configure Binance API credentials
+3. Run the Python script for backtesting
+
+## Core Components
+
+- **Data Pipeline**: Historical data fetching
+- **Signal Generator**: Trading signal computation
+- **Portfolio Manager**: Dynamic weight optimization
+- **Performance Evaluator**: Strategy analysis and metrics
+
+## Visualization Features
+
+- Price and volume trend analysis
+- Return distribution plots
+- Portfolio weight allocation timeline
+- Strategy vs BTC/USD performance comparison
+
+## Performance Metrics
+
+| Metric | Value |
+|--------|--------|
+| Gross Return | 1,137.37% |
+| Net Return | 769.64% |
+| BTC Return | 326.02% |
+| Gross Sharpe Ratio | 1.93 |
+| Net Sharpe Ratio | 1.69 |
+| Maximum Drawdown | -29.11% |
+| Monthly Win Rate | 58.33% |
